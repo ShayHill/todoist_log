@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "todoist-log"
+version = "0.1.0"
+description = "Log completed tasks by for one day"
+authors = ["Shay Hill <shay_public@hotmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "todoist_log"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+todoist-tree = "^0.1.0"
+paragraphs = "^0.2.0"
+
+[tool.poetry.group.dev.dependencies]
+commitizen = "^2.39.1"
+pre-commit = "^2.21.0"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.1.0"
+tag_format = "$version"
+version_files = [
+    "pyproject.toml:^version"
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pyright]
+include = ["src"]
+exclude = ["**/__pycache__.py"]
+
+pythonVersion = "3.10"
+pythonPlatform = "Any"
+
+typeCheckingMode = "strict"
+reportShadowedImports = true
+reportCallInDefaultInitializer = true
+reportImplicitStringConcatenation = true
+# reportMissingSuperCall = true
+reportPropertyTypeMismatch = true
+reportUninitializedInstanceVariable = true
+reportUnnecessaryTypeIgnoreComment = true
+reportUnusedCallResult = true
+
+venvPath = "C:\\Users\\shaya\\AppData\\Local\\pypoetry\\Cache\\virtualenvs"
+venv = "C:\\Users\\shaya\\AppData\\Local\\pypoetry\\Cache\\virtualenvs\\todoist-log-4z2BkOhj-py3.11"
